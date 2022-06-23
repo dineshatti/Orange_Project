@@ -1,0 +1,634 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46C91B35-8379-4549-86B2-E0713B89C153}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Orange_Project</RootNamespace>
+    <AssemblyName>Orange_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44363</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Add_Job.aspx" />
+    <Content Include="Applied_Job.aspx" />
+    <Content Include="Common_Signup.aspx" />
+    <Content Include="Company_Dashboard.aspx" />
+    <Content Include="Comp_Inbox.aspx" />
+    <Content Include="Comp_Profile.aspx" />
+    <Content Include="Forgot_Password.aspx" />
+    <Content Include="Login_Page.aspx" />
+    <Content Include="Login_Page_Items\css\main.css" />
+    <Content Include="Login_Page_Items\css\util.css" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Login_Page_Items\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="Login_Page_Items\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="Login_Page_Items\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Login_Page_Items\grad.gif" />
+    <Content Include="Login_Page_Items\images\bg-01.jpg" />
+    <Content Include="Login_Page_Items\images\bg.jpg" />
+    <Content Include="Login_Page_Items\images\icons\favicon.ico" />
+    <Content Include="Login_Page_Items\js\bootstrap-datepicker.js" />
+    <Content Include="Login_Page_Items\js\bootstrap.min.js" />
+    <Content Include="Login_Page_Items\js\google-map.js" />
+    <Content Include="Login_Page_Items\js\jquery-3.2.1.min.js" />
+    <Content Include="Login_Page_Items\js\jquery-migrate-3.0.1.min.js" />
+    <Content Include="Login_Page_Items\js\jquery.animateNumber.min.js" />
+    <Content Include="Login_Page_Items\js\jquery.easing.1.3.js" />
+    <Content Include="Login_Page_Items\js\jquery.magnific-popup.min.js" />
+    <Content Include="Login_Page_Items\js\jquery.min.js" />
+    <Content Include="Login_Page_Items\js\jquery.stellar.min.js" />
+    <Content Include="Login_Page_Items\js\jquery.timepicker.min.js" />
+    <Content Include="Login_Page_Items\js\jquery.waypoints.min.js" />
+    <Content Include="Login_Page_Items\js\main.js" />
+    <Content Include="Login_Page_Items\js\main1.js" />
+    <Content Include="Login_Page_Items\js\owl.carousel.min.js" />
+    <Content Include="Login_Page_Items\js\popper.min.js" />
+    <Content Include="Login_Page_Items\js\scrollax.min.js" />
+    <Content Include="Login_Page_Items\vendor\animate\animate.css" />
+    <Content Include="Login_Page_Items\vendor\animsition\css\animsition.css" />
+    <Content Include="Login_Page_Items\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Login_Page_Items\vendor\animsition\js\animsition.js" />
+    <Content Include="Login_Page_Items\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\js\popper.js" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Login_Page_Items\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Login_Page_Items\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Login_Page_Items\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Login_Page_Items\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Login_Page_Items\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Login_Page_Items\vendor\daterangepicker\moment.js" />
+    <Content Include="Login_Page_Items\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Login_Page_Items\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Login_Page_Items\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Login_Page_Items\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Login_Page_Items\vendor\select2\select2.css" />
+    <Content Include="Login_Page_Items\vendor\select2\select2.js" />
+    <Content Include="Login_Page_Items\vendor\select2\select2.min.css" />
+    <Content Include="Login_Page_Items\vendor\select2\select2.min.js" />
+    <Content Include="Registration_Items\css\main.css" />
+    <Content Include="Registration_Items\css\main.min.css" />
+    <Content Include="Registration_Items\js\global.js" />
+    <Content Include="Registration_Items\vendor\datepicker\daterangepicker.css" />
+    <Content Include="Registration_Items\vendor\datepicker\daterangepicker.js" />
+    <Content Include="Registration_Items\vendor\datepicker\moment.min.js" />
+    <Content Include="Registration_Items\vendor\font-awesome-4.7\css\font-awesome.css" />
+    <Content Include="Registration_Items\vendor\font-awesome-4.7\css\font-awesome.min.css" />
+    <Content Include="Registration_Items\vendor\font-awesome-4.7\fonts\fontawesome-webfont.svg" />
+    <Content Include="Registration_Items\vendor\font-awesome-4.7\HELP-US-OUT.txt" />
+    <Content Include="Registration_Items\vendor\jquery\jquery.js" />
+    <Content Include="Registration_Items\vendor\jquery\jquery.min.js" />
+    <Content Include="Registration_Items\vendor\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="Registration_Items\vendor\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="Registration_Items\vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Registration_Items\vendor\select2\select2.min.css" />
+    <Content Include="Registration_Items\vendor\select2\select2.min.js" />
+    <Content Include="Signup_Company.aspx" />
+    <Content Include="Student_EducationDetails.aspx" />
+    <Content Include="Student_Signup.aspx" />
+    <Content Include="Stud_Dash_Items\images\logo.png" />
+    <Content Include="Student_Dashboard.aspx" />
+    <Content Include="Stud_Dash_Items\css\ajax-loader.gif" />
+    <Content Include="Stud_Dash_Items\css\animate.css" />
+    <Content Include="Stud_Dash_Items\css\bootstrap-datepicker.css" />
+    <Content Include="Stud_Dash_Items\css\bootstrap.min.css" />
+    <Content Include="Stud_Dash_Items\css\flaticon.css" />
+    <Content Include="Stud_Dash_Items\css\jquery.timepicker.css" />
+    <Content Include="Stud_Dash_Items\css\magnific-popup.css" />
+    <Content Include="Stud_Dash_Items\css\owl.carousel.min.css" />
+    <Content Include="Stud_Dash_Items\css\owl.theme.default.min.css" />
+    <Content Include="Stud_Dash_Items\css\style.css" />
+    <Content Include="Stud_Dash_Items\fonts\flaticon\backup.txt" />
+    <Content Include="Stud_Dash_Items\fonts\flaticon\font\flaticon.css" />
+    <Content Include="Stud_Dash_Items\fonts\flaticon\font\flaticon.html" />
+    <Content Include="Stud_Dash_Items\fonts\flaticon\font\Flaticon.svg" />
+    <Content Include="Stud_Dash_Items\images\loc.png" />
+    <Content Include="Stud_Dash_Items\images\logo_icon.ico" />
+    <Content Include="Stud_Dash_Items\images\Logo_Pic.ico" />
+    <Content Include="Stud_Dash_Items\js\bootstrap-datepicker.js" />
+    <Content Include="Stud_Dash_Items\js\bootstrap.min.js" />
+    <Content Include="Stud_Dash_Items\js\google-map.js" />
+    <Content Include="Stud_Dash_Items\js\jquery-3.2.1.min.js" />
+    <Content Include="Stud_Dash_Items\js\jquery-migrate-3.0.1.min.js" />
+    <Content Include="Stud_Dash_Items\js\jquery.animateNumber.min.js" />
+    <Content Include="Stud_Dash_Items\js\jquery.easing.1.3.js" />
+    <Content Include="Stud_Dash_Items\js\jquery.magnific-popup.min.js" />
+    <Content Include="Stud_Dash_Items\js\jquery.min.js" />
+    <Content Include="Stud_Dash_Items\js\jquery.stellar.min.js" />
+    <Content Include="Stud_Dash_Items\js\jquery.timepicker.min.js" />
+    <Content Include="Stud_Dash_Items\js\jquery.waypoints.min.js" />
+    <Content Include="Stud_Dash_Items\js\main.js" />
+    <Content Include="Stud_Dash_Items\js\owl.carousel.min.js" />
+    <Content Include="Stud_Dash_Items\js\popper.min.js" />
+    <Content Include="Stud_Dash_Items\js\scrollax.min.js" />
+    <Content Include="Stud_Inbox.aspx" />
+    <Content Include="Stud_Profile.aspx" />
+    <Content Include="TableForms\css\main.css" />
+    <Content Include="TableForms\css\util.css" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="TableForms\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="TableForms\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="TableForms\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="TableForms\fonts\montserrat\OFL.txt" />
+    <Content Include="TableForms\images\bckgrnd_img.jpg" />
+    <Content Include="TableForms\images\bckgrnd_img1.jpg" />
+    <Content Include="TableForms\images\bg-01.jpg" />
+    <Content Include="TableForms\images\bg-img.png" />
+    <Content Include="TableForms\images\icons\favicon.ico" />
+    <Content Include="TableForms\images\img-01.png" />
+    <Content Include="TableForms\js\main.js" />
+    <Content Include="TableForms\vendor\animate\animate.css" />
+    <Content Include="TableForms\vendor\animsition\css\animsition.css" />
+    <Content Include="TableForms\vendor\animsition\css\animsition.min.css" />
+    <Content Include="TableForms\vendor\animsition\js\animsition.js" />
+    <Content Include="TableForms\vendor\animsition\js\animsition.min.js" />
+    <Content Include="TableForms\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="TableForms\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="TableForms\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="TableForms\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="TableForms\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="TableForms\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="TableForms\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="TableForms\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="TableForms\vendor\bootstrap\js\popper.js" />
+    <Content Include="TableForms\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="TableForms\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="TableForms\vendor\countdowntime\countdowntime.js" />
+    <Content Include="TableForms\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="TableForms\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="TableForms\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="TableForms\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="TableForms\vendor\daterangepicker\moment.js" />
+    <Content Include="TableForms\vendor\daterangepicker\moment.min.js" />
+    <Content Include="TableForms\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="TableForms\vendor\noui\nouislider.css" />
+    <Content Include="TableForms\vendor\noui\nouislider.js" />
+    <Content Include="TableForms\vendor\noui\nouislider.min.css" />
+    <Content Include="TableForms\vendor\noui\nouislider.min.js" />
+    <Content Include="TableForms\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="TableForms\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="TableForms\vendor\select2\select2.css" />
+    <Content Include="TableForms\vendor\select2\select2.js" />
+    <Content Include="TableForms\vendor\select2\select2.min.css" />
+    <Content Include="TableForms\vendor\select2\select2.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_Job.aspx.cs">
+      <DependentUpon>Add_Job.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add_Job.aspx.designer.cs">
+      <DependentUpon>Add_Job.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applied_Job.aspx.cs">
+      <DependentUpon>Applied_Job.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applied_Job.aspx.designer.cs">
+      <DependentUpon>Applied_Job.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common_Signup.aspx.cs">
+      <DependentUpon>Common_Signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common_Signup.aspx.designer.cs">
+      <DependentUpon>Common_Signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Company_Dashboard.aspx.cs">
+      <DependentUpon>Company_Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company_Dashboard.aspx.designer.cs">
+      <DependentUpon>Company_Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comp_Inbox.aspx.cs">
+      <DependentUpon>Comp_Inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comp_Inbox.aspx.designer.cs">
+      <DependentUpon>Comp_Inbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comp_Profile.aspx.cs">
+      <DependentUpon>Comp_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comp_Profile.aspx.designer.cs">
+      <DependentUpon>Comp_Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forgot_Password.aspx.cs">
+      <DependentUpon>Forgot_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forgot_Password.aspx.designer.cs">
+      <DependentUpon>Forgot_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Page.aspx.cs">
+      <DependentUpon>Login_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login_Page.aspx.designer.cs">
+      <DependentUpon>Login_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Signup_Company.aspx.cs">
+      <DependentUpon>Signup_Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Signup_Company.aspx.designer.cs">
+      <DependentUpon>Signup_Company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Dashboard.aspx.cs">
+      <DependentUpon>Student_Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student_Dashboard.aspx.designer.cs">
+      <DependentUpon>Student_Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student_EducationDetails.aspx.cs">
+      <DependentUpon>Student_EducationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student_EducationDetails.aspx.designer.cs">
+      <DependentUpon>Student_EducationDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Signup.aspx.cs">
+      <DependentUpon>Student_Signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student_Signup.aspx.designer.cs">
+      <DependentUpon>Student_Signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Stud_Inbox.aspx.cs">
+      <DependentUpon>Stud_Inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stud_Inbox.aspx.designer.cs">
+      <DependentUpon>Stud_Inbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Stud_Profile.aspx.cs">
+      <DependentUpon>Stud_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stud_Profile.aspx.designer.cs">
+      <DependentUpon>Stud_Profile.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Login_Page_Items\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Login_Page_Items\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Login_Page_Items\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Login_Page_Items\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Login_Page_Items\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="Login_Page_Items\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Login_Page_Items\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Stud_Dash_Items\css\.DS_Store" />
+    <Content Include="Stud_Dash_Items\fonts\.DS_Store" />
+    <Content Include="Stud_Dash_Items\fonts\flaticon\.DS_Store" />
+    <Content Include="Stud_Dash_Items\fonts\flaticon\font\Flaticon.eot" />
+    <Content Include="Stud_Dash_Items\fonts\flaticon\font\Flaticon.ttf" />
+    <Content Include="Stud_Dash_Items\fonts\flaticon\font\Flaticon.woff" />
+    <Content Include="Stud_Dash_Items\fonts\flaticon\font\Flaticon.woff2" />
+    <Content Include="Stud_Dash_Items\fonts\flaticon\font\_flaticon.scss" />
+    <Content Include="Stud_Dash_Items\fonts\flaticon\license\license.pdf" />
+    <Content Include="Stud_Dash_Items\images\.DS_Store" />
+    <Content Include="Stud_Dash_Items\js\.DS_Store" />
+    <Content Include="Stud_Dash_Items\scss\.DS_Store" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\.DS_Store" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\bootstrap.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_deprecate.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_interactions.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_overflow.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_shadows.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_stretched-link.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\vendor\_rfs.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_alert.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_badge.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_button-group.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_buttons.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_card.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_carousel.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_close.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_code.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_dropdown.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_forms.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_functions.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_grid.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_images.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_input-group.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_list-group.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_media.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_mixins.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_modal.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_nav.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_navbar.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_pagination.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_popover.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_print.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_progress.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_reboot.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_root.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_spinners.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_tables.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_toasts.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_tooltip.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_transitions.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_type.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_utilities.scss" />
+    <Content Include="Stud_Dash_Items\scss\bootstrap\_variables.scss" />
+    <Content Include="Stud_Dash_Items\scss\style.scss" />
+    <Content Include="Registration_Items\vendor\font-awesome-4.7\fonts\fontawesome-webfont.eot" />
+    <Content Include="Registration_Items\vendor\font-awesome-4.7\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Registration_Items\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff" />
+    <Content Include="Registration_Items\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Registration_Items\vendor\font-awesome-4.7\fonts\FontAwesome.otf" />
+    <Content Include="Registration_Items\vendor\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Registration_Items\vendor\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Registration_Items\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Registration_Items\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="TableForms\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="TableForms\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="TableForms\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="TableForms\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="TableForms\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-Black.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-Light.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-Thin.ttf" />
+    <Content Include="TableForms\fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="TableForms\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="TableForms\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="TableForms\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="TableForms\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="TableForms\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="TableForms\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49195</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44363/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
